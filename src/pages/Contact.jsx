@@ -16,7 +16,7 @@ export default function Contact() {
                 url={"/images/contact-section.jpg"}
                 section={"CONTACT US"}
             />
-            <section className="flex justify-between px-8 md:px-16 xl:px-70 2xl:px-96 mt-20 mb-20">
+            <section className="flex flex-col lg:flex-row justify-between px-8 md:px-16 xl:px-70 2xl:px-96 mt-20 mb-20">
                 <aside>
                     <div>
                         <p className="text-gray-600 font-bold">Contact Info.</p>

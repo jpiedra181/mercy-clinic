@@ -7,7 +7,9 @@ export default function HeaderImg({ url, section }) {
                 <img src={url} alt="" className="w-full h-full object-cover" />
             </div>
             <div className="w-screen h-full flex flex-col justify-center items-center gap-6 bg-[rgb(0,0,0,0.2)]">
-                <h2 className="text-6xl text-white font-bold">{section}</h2>
+                <h2 className="text-6xl text-white font-bold text-center">
+                    {section}
+                </h2>
                 <Breadcrumbs section={section} />
             </div>
         </section>
