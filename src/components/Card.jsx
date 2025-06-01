@@ -5,8 +5,26 @@ import Typography from "@mui/material/Typography"
 import CardActionArea from "@mui/material/CardActionArea"
 import CardActions from "@mui/material/CardActions"
 import Button from "@mui/material/Button"
+import { useNavigate } from "react-router-dom"
 
-export default function ActionAreaCard({ url, title, description }) {
+export default function ActionAreaCard({
+    url,
+    title,
+    description,
+    isSection,
+    page,
+}) {
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        if (isSection) {
+            document
+                .querySelector("#services")
+                .scrollIntoView({ behavior: "smooth" })
+        } else {
+            navigate(page)
+        }
+    }
     return (
         <Card
             sx={{
@@ -55,6 +73,7 @@ export default function ActionAreaCard({ url, title, description }) {
                                 color: "white",
                                 borderRadius: "12px",
                             }}
+                            onClick={handleClick}
                         >
                             More Info
                         </Button>

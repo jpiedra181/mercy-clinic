@@ -19,27 +19,33 @@ import OpinionCard from "../components/OpinionCard"
 export default function Home() {
     return (
         <>
-            <article className="w-screen h-[500px]">
+            <article className="w-screen h-[500px] relative">
                 <img
                     src="/images/hero-img-1.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                 />
+                <h2 className="absolute inset-0 flex items-center justify-center text-white font-bold text-4xl text-center px-20 bg-[rgb(0,0,0,0.2)]">
+                    Compassionate Healthcare for Laredo & Webb County Since 1894
+                </h2>
             </article>
             <article className="flex flex-wrap lg:flex-row justify-center items-center gap-12 mt-20 px-8 md:px-16 xl:px-70 2xl:px-96">
                 <ActionAreaCard
                     url={"/images/services-img.jpg"}
                     title={"Our Services"}
                     description={
-                        "Mercy Clinic provides integrated behavioral healthcare with primary care to low-income adults without health insurance. The services provided by Mercy Clinic are available to current clinic patients. Call 956.718.6810 to ..."
+                        "Mercy Clinic provides integrated behavioral healthcare with primary care to low-income adults without health insurance. The services provided by Mercy Clinic are available to ..."
                     }
+                    isSection={true}
                 />
                 <ActionAreaCard
                     url={"/images/about-us-img.jpg"}
                     title={"About Us"}
                     description={
-                        "Mercy Clinic provides integrated behavioral healthcare with primary care to low-income adults without health insurance. En la Clínica de Mercy, ya se ofrecen Servicios Integrados de Salud Conductual/Emocional con los ..."
+                        "Mercy Clinic provides integrated behavioral healthcare with primary care to low-income adults without health insurance. En la Clínica de Mercy, ya se ofrecen Servicios Integrados de ..."
                     }
+                    isSection={false}
+                    page={"/about"}
                 />
                 <ActionAreaCard
                     url={"/images/contact-img.jpg"}
@@ -47,6 +53,8 @@ export default function Home() {
                     description={
                         "Call 956.718.6810 to make an appointment or visit us at 2500 Zacatecas St. in south Laredo. Haga su cita hoy, llamando al 956.718.6810 o visítenos en la Calle Zacatecas 2500 ..."
                     }
+                    isSection={false}
+                    page={"/contact"}
                 />
             </article>
             <article className="flex flex-col items-center gap-16 my-20 px-8">
@@ -56,6 +64,7 @@ export default function Home() {
                     description={
                         "Welcome to the inaugural Mercy Clinic website! You can’t begin to imagine how long I’ve waited to state that. This brand new website is just one of many endeavors we have"
                     }
+                    page={"blog/welcome"}
                 />
                 <CardSection
                     url={"/images/MercyMinistries.jpg"}
@@ -63,6 +72,7 @@ export default function Home() {
                     description={
                         "All services are open at Mercy Clinic. Healthcare providers, behavioral health consultants, nurse educators, social services, laboratory services and all other support services are available. Please call if you have"
                     }
+                    page={"blog/mercy-clinic-is-open"}
                 />
                 <article className="flex flex-col gap-4">
                     <iframe
@@ -91,7 +101,10 @@ export default function Home() {
                     />
                 </div>
                 <article className="flex flex-col gap-4 items-center px-8 md:px-16 xl:px-70 2xl:px-96">
-                    <h2 className="text-2xl md:text-3xl font-bold">
+                    <h2
+                        className="text-2xl md:text-3xl font-bold"
+                        id="services"
+                    >
                         OUR SERVICES
                     </h2>
                     <p className="text-center max-w-[750px]">
@@ -268,9 +281,9 @@ export default function Home() {
 
             <section className="flex w-screen h-fit relative">
                 <div
-                    className="w-screen md:w-[55%] lg:w-[65%] flex flex-col items-start text-white h-full bg-[#242424] pl-8 md:pl-16 xl:pl-70 2xl:pl-96 py-1 md:pr-24"
+                    className="w-screen md:w-[55%] lg:w-[65%] flex flex-col items-start text-white h-full bg-[#242424] pl-8 md:pl-16 xl:pl-70 2xl:pl-96 py-8 pr-12 md:pr-24"
                     style={{
-                        clipPath: "polygon(0 0%, 100% 0, 95% 100%, 0% 100%)",
+                        clipPath: "polygon(0 0%, 100% 0, 97% 100%, 0% 100%)",
                     }}
                 >
                     <p>Why Choose Us?</p>

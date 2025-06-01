@@ -5,8 +5,15 @@ import Typography from "@mui/material/Typography"
 import CardActionArea from "@mui/material/CardActionArea"
 import CardActions from "@mui/material/CardActions"
 import Button from "@mui/material/Button"
+import { useNavigate } from "react-router-dom"
 
-export default function CardSection({ url, title, description }) {
+export default function CardSection({ url, title, description, page }) {
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate(page)
+    }
+
     return (
         <Card
             sx={{ maxWidth: 800 }}
@@ -51,6 +58,7 @@ export default function CardSection({ url, title, description }) {
                                 color: "white",
                                 borderRadius: "12px",
                             }}
+                            onClick={handleClick}
                         >
                             Read More
                         </Button>

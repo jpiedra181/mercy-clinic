@@ -17,8 +17,8 @@ export default function About() {
                 </p>
             </section>
             <section className="bg-[#acacac] flex justify-center items-center px-8 md:px-16 xl:px-70 2xl:px-96 py-20">
-                <section className="flex flex-col md:flex-row px-12 bg-white">
-                    <article className="flex flex-col">
+                <section className="flex flex-col md:flex-row gap-10 p-12  bg-white">
+                    <article className="flex flex-col gap-32">
                         <article className="flex flex-col">
                             <Article
                                 en={
@@ -694,7 +694,7 @@ export default function About() {
                         </article>
                     </article>
                     <article className="flex flex-col">
-                        <article>
+                        <article className="flex flex-col gap-4">
                             <CardAbout
                                 url={"/images/about-1.jpg"}
                                 title={"Mission, Vision & Values"}

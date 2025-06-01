@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet } from "react-router-dom"
 import { ArrowRight, Menu } from "../components/Icons"
+import MobileMenu from "../components/MobileMenu"
 
 export default function Layout() {
     return (
@@ -18,10 +19,15 @@ export default function Layout() {
                         <img src="/icons/at-email.svg" alt="" className="w-4" />
                         diana.granados@mercy.net
                     </span>
-                    <span className="flex items-center gap-1">
+                    <Link
+                        className="flex items-center gap-1"
+                        to={
+                            "https://www.google.com/maps/place/Mercy+Ministries+of+Laredo/@27.4765396,-99.4819373,14.71z/data=!4m6!3m5!1s0x8661239057c4e175:0x3a2714903df21f47!8m2!3d27.4755979!4d-99.469995!16s%2Fg%2F1tg8723k?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
+                        }
+                    >
                         <img src="/icons/location.svg" alt="" className="w-4" />
                         Find us on map
-                    </span>
+                    </Link>
                 </div>
             </section>
             <header className="h-[80px] flex justify-between items-center bg-white overflow-hidden sticky top-0 z-10">
@@ -31,11 +37,13 @@ export default function Layout() {
                         clipPath: "polygon(0 0%, 100% 0, 95% 100%, 0% 100%)",
                     }}
                 >
-                    <img
-                        src="/images/Mercy_clinic_logo.png"
-                        alt=""
-                        className="h-[80%] md:h-full"
-                    />
+                    <Link to={"/"} className="h-full">
+                        <img
+                            src="/images/Mercy_clinic_logo.png"
+                            alt=""
+                            className="h-[80%] md:h-full"
+                        />
+                    </Link>
                 </div>
                 <nav className="hidden lg:flex items-center md:text-sm lg:text-md pr-8 md:pr-16 xl:pr-70 2xl:pr-96 font-bold">
                     <NavLink
@@ -110,7 +118,7 @@ export default function Layout() {
                     </NavLink>
                 </nav>
                 <div className="flex lg:hidden pr-8 md:pr-16 xl:pr-80 ">
-                    <Menu />
+                    <MobileMenu />
                 </div>
             </header>
             <main className="overflow-hidden">
@@ -138,54 +146,82 @@ export default function Layout() {
                     <article className="flex flex-col">
                         <h3 className="font-bold">USEFUL LINKS</h3>
                         <img src="/icons/hr.png" alt="" className="w-12" />
-                        <ul className="flex flex-col gap-2 ">
-                            <li to={"/"} className="">
-                                <Link>► Job Listings</Link>
+                        <ul className="flex flex-col gap-4 ">
+                            <li className="">
+                                <Link
+                                    to={
+                                        "https://mercycliniclaredo.net/wp-content/uploads/2020/03/jobs.pdf"
+                                    }
+                                >
+                                    ► Job Listings
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Casa de Misericordia</Link>
+                            <li className="">
+                                <Link to={"https://casademisericordia.org/"}>
+                                    ► Casa de Misericordia
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Methodist Healthcare Ministries</Link>
+                            <li className="">
+                                <Link to={"https://www.mhm.org/"}>
+                                    ► Methodist Healthcare Ministries
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► City of Laredo</Link>
+                            <li className="">
+                                <Link to={"https://www.cityoflaredo.com/"}>
+                                    ► City of Laredo
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Laredo Active living</Link>
+                            <li className="">
+                                <Link to={"https://laredoactiveliving.com/"}>
+                                    ► Laredo Active living
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► AHEC</Link>
+                            <li className="">
+                                <Link to={"http://www.mrgbahec.org/"}>
+                                    ► AHEC
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Indigent Healthcare</Link>
+                            <li className="">
+                                <Link
+                                    to={
+                                        "http://www.webbcountytx.gov/IndigentHealthCare/"
+                                    }
+                                >
+                                    ► Indigent Healthcare
+                                </Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Diocese of Laredo</Link>
+                            <li className="">
+                                <Link
+                                    to={
+                                        "https://dioceseoflaredo.org/catholic-charities-diocese-laredo"
+                                    }
+                                >
+                                    ► Diocese of Laredo
+                                </Link>
                             </li>
                         </ul>
                     </article>
                     <article className="flex flex-col">
                         <h3 className="font-bold">QUICK LINKS</h3>
                         <img src="/icons/hr.png" alt="" className="w-12" />
-                        <ul className="flex flex-col gap-2">
-                            <li to={"/"} className="">
-                                <Link>► Home</Link>
+                        <ul className="flex flex-col gap-4">
+                            <li className="">
+                                <Link to={"/"}>► Home</Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► About Us</Link>
+                            <li className="">
+                                <Link to={"/about"}>► About Us</Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Donations</Link>
+                            <li className="">
+                                <Link to={"/donations"}>► Donations</Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Videos</Link>
+                            <li className="">
+                                <Link to={"/videos"}>► Videos</Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Blog</Link>
+                            <li className="">
+                                <Link to={"/blog"}>► Blog</Link>
                             </li>
-                            <li to={"/"} className="">
-                                <Link>► Contact</Link>
+                            <li className="">
+                                <Link to={"/contact"}>► Contact</Link>
                             </li>
                         </ul>
                     </article>

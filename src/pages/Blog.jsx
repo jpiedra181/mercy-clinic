@@ -5,7 +5,7 @@ export default function Blog() {
     return (
         <>
             <HeaderImg url={"/images/blog-section.jpg"} section={"BLOG"} />
-            <section className="flex flex-col gap-12 items-center mt-20 mb-20">
+            <section className="flex flex-col gap-12 items-center mt-20 mb-20 px-8 md:px-16 xl:px-70 2xl:px-96">
                 <CardBlog
                     url={"/images/MercyMinistries.jpg"}
                     title={"Mercy Clinic Remains Open!"}

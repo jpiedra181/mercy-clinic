@@ -11,7 +11,7 @@ export default function Donations() {
                 url={"/images/donate-section.jpg"}
                 section={"DONATIONS"}
             />
-            <section className="flex flex-col justify-center items-center gap-12 mt-20 mb-20 w-screen">
+            <section className="flex flex-col justify-center items-center gap-12 mt-20 mb-20 w-screen px-8 md:px-16 xl:px-70 2xl:px-96">
                 <h3 className="text-3xl text-gray-600">
                     Donate Now and help change Lives
                 </h3>
@@ -21,7 +21,7 @@ export default function Donations() {
                 >
                     DONATE
                 </button>
-                <p>
+                <p className="text-center">
                     To donate to Mercy Clinic Laredo click the Donate button.
                     You will be redirected to a secure site. Thank you for your
                     support.

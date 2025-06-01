@@ -9,7 +9,7 @@ export default function Article2() {
                 url={"/images/blog-section.jpg"}
                 section={"WELCOME TO OUR NEW WEBSITE!"}
             />
-            <section className="flex justify-center mt-20 mb-20">
+            <section className="flex justify-center mt-20 mb-20 px-8 md:px-16 xl:px-70 2xl:px-96">
                 <CardBlog
                     url={"/images/Sisters-Mission.jpg"}
                     title={"Welcome to the inaugural Mercy Clinic website!"}
